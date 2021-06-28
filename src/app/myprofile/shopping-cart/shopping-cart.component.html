@@ -1,0 +1,89 @@
+<div class="shopping-cart-conatiner">
+
+    <div class="title">
+        My Cart
+    </div>
+    <div class="header">
+
+
+        <div class="img">
+
+        </div>
+        <div class="name">
+            Product
+        </div>
+        <div class="price">
+            Price
+        </div>
+        <div class="quantity">
+            Quantity
+        </div>
+        <div class="total">
+            Total
+        </div>
+        <div class="close">
+
+        </div>
+    </div>
+
+    <div class="body" *ngFor="let item of cart">
+
+        <div class="img">
+
+            <img class="productImg" src="{{item.image}}" alt="Photo of a Shiba Inu">
+        </div>
+        <div class="name">
+            <h3> {{item.text}}</h3>
+        </div>
+        <div class="price">
+            LKR.{{item.price}}
+        </div>
+        <div class="quantity">
+            <mat-icon class="close-icon">add</mat-icon><input
+                style="height: 20px; margin-right: 5px; text-align: center;" type="text" size="1" value="1" />
+            <mat-icon class="close-icon">remove</mat-icon>
+        </div>
+        <div class="total">
+            LKR.{{item.price}}
+        </div>
+        <div class="close">
+            <mat-icon class="close-icon">close</mat-icon>
+        </div>
+
+    </div>
+
+
+
+    <div class="cart-total">
+        <h2>CART TOTALS</h2>
+        <hr>
+        <table style="width: 100%">
+            <tr>
+                <td>Subtotal</td>
+                <td>LKR.265,000</td>
+            </tr>
+            <tr>
+                <td>Delivery</td>
+                <td>LKR.1,000</td>
+            </tr>
+            <tr>
+                <td>Discount</td>
+                <td>LKR.500</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                    
+                <td>Total</td>
+                <td><b>LKR.265,500</b></td>
+            </tr>
+        </table>
+        <div class="checkout-button">
+            <button mat-stroked-button color="primary" class="button full-button">PROCEED TO CHECKOUT</button>
+        </div>
+    </div>
+
+</div>
